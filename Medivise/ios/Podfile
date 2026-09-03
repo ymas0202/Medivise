@@ -1,0 +1,31 @@
+# ios/Podfile
+
+platform :ios, '11.0'
+
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def flutter_installation()
+  generated_xcconfig = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcconfig)
+    raise "#{generated_xcconfig} must exist. Run 'flutter pub get' first."
+  end
+  system('flutter', 'pub', 'get')
+end
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_installation()
+
+  flutter_install_ios_pods
+
+  pod 'GoogleMLKit/TextRecognition', '3.2.0' # ✅ Add this for text recognition
+
+end

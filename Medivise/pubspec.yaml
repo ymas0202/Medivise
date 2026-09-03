@@ -1,0 +1,51 @@
+name: medivise  
+description: "A secure medical diagnosis app for paramedics."
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^8.0.0
+  
+  # Firebase
+  firebase_core: ^3.15.1
+  firebase_auth: ^5.6.2
+  cloud_firestore: ^5.6.11
+
+  # UI & State Management
+  provider: ^6.1.5
+  shared_preferences: ^2.2.2
+  flutter_markdown: ^0.6.14
+  font_awesome_flutter: ^10.8.0
+  cupertino_icons: ^1.0.8
+
+  # File & Image Processing
+  file_picker: ^10.2.0
+  syncfusion_flutter_pdf: ^24.1.44
+  google_mlkit_text_recognition: ^0.11.0
+  image: ^4.1.7
+
+  # HTTP & Environment
+  http: ^1.1.0
+  flutter_dotenv: ^5.1.0
+
+  # REMOVED: libre_translate, flutter_localizations, speech_to_text
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/assets/logo.png 
+    - .env
+
+shared_preferences: ^2.2.2
