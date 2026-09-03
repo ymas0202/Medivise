@@ -137,6 +137,12 @@ flutter run
 Point the app at your own Firebase project by re-running `flutterfire configure`, which
 regenerates `lib/firebase_options.dart` and `android/app/google-services.json`.
 
+### 3. Logging in
+
+There are no demo credentials, and none are needed. The login endpoint is a development
+stub that accepts **any** email and password (see *Known limitations* below), so enter
+anything well-formed — e.g. `demo@example.com` / `demo` — to reach the main app.
+
 The client has `http://localhost:3000` hardcoded across the screens in `lib/screens/`. On a
 physical device or an Android emulator you will need to change that to your machine's LAN
 address (or `10.0.2.2` for the Android emulator).
