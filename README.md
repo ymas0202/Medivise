@@ -164,10 +164,8 @@ Honest notes on where the prototype stopped, since it was a one-semester project
 - **Two parallel analysis implementations** (Express backend and Cloud Function) with the
   Cloud Function left unconnected.
 
-## Team
-
-Built by a student team during the Fall 2025 semester.
-
 ## License
 
-No license has been assigned. All rights reserved by the original authors.
+No license is assigned, so the default applies: copyright is retained by the original
+authors and all rights are reserved. The code is published for reading and evaluation,
+not for reuse.
