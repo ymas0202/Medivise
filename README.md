@@ -104,8 +104,8 @@ All routes are prefixed `/api`. Everything except `/auth/*` and `/health` requir
 
 ## Running it locally
 
-You will need your own OpenAI API key and Firebase project — the original project's
-credentials are not in this repository and have been revoked.
+You will need your own OpenAI API key and Firebase project. The original project's
+credentials are not included in this repository.
 
 **Prerequisites:** Flutter 3.8+, Node.js 18+, a Firebase project with Firestore enabled.
 
@@ -137,15 +137,15 @@ flutter run
 Point the app at your own Firebase project by re-running `flutterfire configure`, which
 regenerates `lib/firebase_options.dart` and `android/app/google-services.json`.
 
+The client has `http://localhost:3000` hardcoded across the screens in `lib/screens/`. On a
+physical device or an Android emulator you will need to change that to your machine's LAN
+address (or `10.0.2.2` for the Android emulator).
+
 ### 3. Logging in
 
 There are no demo credentials, and none are needed. The login endpoint is a development
 stub that accepts **any** email and password (see *Known limitations* below), so enter
 anything well-formed — e.g. `demo@example.com` / `demo` — to reach the main app.
-
-The client has `http://localhost:3000` hardcoded across the screens in `lib/screens/`. On a
-physical device or an Android emulator you will need to change that to your machine's LAN
-address (or `10.0.2.2` for the Android emulator).
 
 ## Known limitations
 
